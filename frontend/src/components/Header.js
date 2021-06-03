@@ -16,19 +16,38 @@ function Header() {
   };
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+      <Navbar
+        className="py-1 navbar navbar-custom"
+        fixed="top"
+        variant="light"
+        bg="light"
+        expand="lg"
+        collapseOnSelect
+      >
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>ProShop</Navbar.Brand>
+            <Navbar.Brand>
+              <img
+                src="/logo_rise_up.png"
+                width="70"
+                height="50"
+                alt="Rise Up"
+              ></img>
+            </Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             {<SearchBox />}
-            <Nav className="mr-auto">
+            <Nav className="flex">
               <LinkContainer to="/cart">
                 <Nav.Link>
-                  <i className="fas fa-shopping-cart"></i>Cart
+                  <i className="fas fa-shopping-cart"></i>Carrito
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/tienda">
+                <Nav.Link>
+                  <i className="fas fa-store"></i>Tienda
                 </Nav.Link>
               </LinkContainer>
 
@@ -53,15 +72,15 @@ function Header() {
               {userInfo && userInfo.isAdmin && (
                 <NavDropdown title="Admin" id="adminmenu">
                   <LinkContainer to="/admin/userlist">
-                    <NavDropdown.Item>Users</NavDropdown.Item>
+                    <NavDropdown.Item>Usuarios</NavDropdown.Item>
                   </LinkContainer>
 
                   <LinkContainer to="/admin/productlist">
-                    <NavDropdown.Item>Products</NavDropdown.Item>
+                    <NavDropdown.Item>Productos</NavDropdown.Item>
                   </LinkContainer>
 
                   <LinkContainer to="/admin/orderlist">
-                    <NavDropdown.Item>Orders</NavDropdown.Item>
+                    <NavDropdown.Item>Órdenes</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}

@@ -1,7 +1,9 @@
 main {
   min-height: 80vh;
 }
-
+body {
+  padding-top: 4%;
+}
 h1 {
   font-size: 1.8rem;
   padding: 1rem 0;
@@ -46,8 +48,44 @@ h3 {
 .carousel a {
   margin: 0 auto;
 }
+
 @media (max-width: 900px) {
   .carousel-caption h2 {
     font-size: 2.5vw;
   }
+}
+.jumbotron {
+  margin: -1.5% 0% 0%;
+  height: 650px;
+  background-image: url("1.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(80%) opacity(50%);
+  filter: saturate(100%) hue-rotate(90deg);
+}
+
+.jumbotron-text {
+  font-size: 3.5rem;
+  padding: 35% 5% 0% 2%;
+  color: #fff;
+}
+.jumbotron-text-small {
+  font-size: 1.2rem;
+  padding: 0% 0% 0% 2%;
+  color: #fff;
+}
+
+.jumbo-btn {
+  margin: 1% 25% 25% 20%;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 25px;
+}
+.jumbo-btn {
+  transition-duration: 0.4s;
+}
+
+.jumbo-btn:hover {
+  background-color: none; /* Green */
+  color: fuchsia;
 }

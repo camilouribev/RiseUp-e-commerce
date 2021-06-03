@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Row, Col } from "react-bootstrap";
-import Product from "../components/Product";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import Paginate from "../components/Paginate";
-import ProductCarousel from "../components/ProductCarousel";
+import Reel from "../components/Reel";
 
 import { listProducts } from "../actions/productActions";
 
@@ -21,14 +18,12 @@ function HomeScreen({ history }) {
 
   return (
     <div>
-      {!keyword && <ProductCarousel />}
-      <h1>Productos</h1>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <div>AQUI</div>
+        <Reel />
       )}
     </div>
   );

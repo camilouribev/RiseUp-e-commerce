@@ -9,13 +9,13 @@ function SearchBox() {
   const submitHandler = (e) => {
     e.preventDefault();
     if (keyword) {
-      history.push(`/?keyword=${keyword}&page=1`);
+      history.push(`/tienda/?keyword=${keyword}&page=1`);
     } else {
       history.push(history.push(history.location.pathname));
     }
   };
   return (
-    <Form onSubmit={submitHandler} inline>
+    <Form onSubmit={submitHandler} inline className="d-flex">
       <Form.Control
         type="text"
         name="q"
@@ -23,8 +23,8 @@ function SearchBox() {
         className="mr-sm-2 ml-sm-5"
       ></Form.Control>
 
-      <Button type="submit" variant="outline-success" className="p-2">
-        Submit
+      <Button type="submit" variant="outline-info" className="p-2">
+        Buscar
       </Button>
     </Form>
   );
