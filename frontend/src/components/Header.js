@@ -19,8 +19,8 @@ function Header() {
       <Navbar
         className="py-1 navbar navbar-custom"
         fixed="top"
-        variant="light"
-        bg="light"
+        variant="dark"
+        bg="dark"
         expand="lg"
         collapseOnSelect
       >
@@ -32,6 +32,7 @@ function Header() {
                 width="70"
                 height="50"
                 alt="Rise Up"
+                id="logo"
               ></img>
             </Navbar.Brand>
           </LinkContainer>

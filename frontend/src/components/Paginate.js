@@ -1,12 +1,12 @@
 import React from "react";
-import { Pagination, Paginator } from "react-bootstrap";
+import { Pagination } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 function Paginate({ pages, page, keyword = "", isAdmin = false }) {
   if (keyword) {
     keyword = keyword.split("?keyword=")[1].split("&")[0];
   }
-  console.log("KEYWORD:", keyword);
+
   return (
     pages > 1 && (
       <Pagination>
@@ -15,7 +15,7 @@ function Paginate({ pages, page, keyword = "", isAdmin = false }) {
             key={x + 1}
             to={
               !isAdmin
-                ? `/?keyword=${keyword}&page=${x + 1}`
+                ? `?keyword=${keyword}&page=${x + 1}`
                 : `/admin/productlist/?keyword=${keyword}&page=${x + 1}`
             }
           >
