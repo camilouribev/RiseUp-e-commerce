@@ -26,7 +26,6 @@ function App() {
     <Router>
       <Header />
       <Route path="/" component={HomeScreen} exact />
-
       <Container>
         <Route path="/tienda" component={StoreHomeScreen} exact />
         <Route path="/login" component={LoginScreen} />

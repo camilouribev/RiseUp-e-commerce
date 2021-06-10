@@ -1,43 +1,65 @@
 import React from "react";
-import { Card, CardDeck } from "react-bootstrap";
 
 function PlanCards() {
   return (
-    <div className="jumbotron-3" id="plans">
-      <CardDeck>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This card has supporting text below as a natural lead-in to
-              additional content.{" "}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </CardDeck>
+    <div className="card-container row" id="plans">
+      <div class="card col-sm">
+        <h1 className="jumbotron-text plans-title">PLANES</h1>
+        <div class="face face1">
+          <h1>1</h1>mes
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="" target="_blank">
+                Plan Oro
+              </a>
+            </h3>
+            <ul>2 clases de pole dance grupales semanales</ul>
+            <ul>1 clases de pole dance personalizada semanal</ul>
+          </div>
+        </div>
+      </div>
+      <div class="card col-sm">
+        <div class="face face1">
+          <h1>3</h1>meses
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="" target="_blank">
+                Plan Platino
+              </a>
+            </h3>
+            <ul>
+              Beneficios plan oro <h2>+</h2>
+            </ul>
+            <ul>4 clases especiales al mes (gimnasia, lira o telas)</ul>
+          </div>
+        </div>
+      </div>
+      <div class="card col-sm">
+        <div class="face face1">
+          <h1>6</h1>meses
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <h3>
+              <a href="" target="_blank">
+                Plan Diamante
+              </a>
+            </h3>
+            <ul>
+              Beneficios plan platino <h2>+</h2>
+            </ul>
+
+            <ul>
+              Asesoría profesion0la en nutrición y acondicionamiento
+              físico.Termo y camiseta.
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
