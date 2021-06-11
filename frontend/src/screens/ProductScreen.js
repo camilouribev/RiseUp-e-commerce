@@ -67,7 +67,7 @@ function ProductScreen({ match, history }) {
   return (
     <div>
       <Link to="/" className="btn btn-light my-3">
-        Go Back
+        Volver
       </Link>
       {loading ? (
         <Loader />
@@ -94,10 +94,10 @@ function ProductScreen({ match, history }) {
                   />
                 </ListGroup.Item>
 
-                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>Preio: ${product.price}</ListGroup.Item>
 
                 <ListGroup.Item>
-                  Description: {product.description}
+                  Descripción: {product.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -107,7 +107,7 @@ function ProductScreen({ match, history }) {
                 <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>
-                      <Col>Price:</Col>
+                      <Col>Precio:</Col>
                       <Col>
                         <strong>${product.price}</strong>
                       </Col>
@@ -115,7 +115,7 @@ function ProductScreen({ match, history }) {
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Status:</Col>
+                      <Col>Estado:</Col>
 
                       <Col>
                         {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
@@ -125,7 +125,7 @@ function ProductScreen({ match, history }) {
                   {product.countInStock > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>Qty</Col>
+                        <Col>Cantidad</Col>
                         <Col xs="auto" className="my-1">
                           <Form.Control
                             as="select"
@@ -152,7 +152,7 @@ function ProductScreen({ match, history }) {
                       disabled={product.countInStock === 0}
                       type="button"
                     >
-                      Add to cart
+                      Agregar al carrito
                     </Button>
                   </ListGroup.Item>
                 </ListGroup>
@@ -161,9 +161,9 @@ function ProductScreen({ match, history }) {
           </Row>
           <Row>
             <Col md={6}>
-              <h4>Reviews</h4>
+              <h4>Reseñas</h4>
               {product.reviews.length === 0 && (
-                <Message variant="info">No reviews</Message>
+                <Message variant="info">Sin reseñas</Message>
               )}
               <ListGroup variant="flush">
                 {product.reviews.map((review) => (
@@ -175,10 +175,10 @@ function ProductScreen({ match, history }) {
                   </ListGroup.Item>
                 ))}
                 <ListGroup.Item>
-                  <h4>Write a review</h4>
+                  <h4>Escribe una reseña</h4>
                   {loadingProductReview && <Loader />}
                   {successProductReview && (
-                    <Message variant="success">Review Submitted</Message>
+                    <Message variant="success">Reseña enviada</Message>
                   )}
                   {errorProductReview && (
                     <Message variant="danger"> {errorProductReview}</Message>
@@ -193,17 +193,17 @@ function ProductScreen({ match, history }) {
                           value={rating}
                           onChange={(e) => setRating(e.target.value)}
                         >
-                          <option value=""> Select...</option>
-                          <option value="1"> Poor</option>
+                          <option value=""> Selecciona...</option>
+                          <option value="1"> Pobre</option>
                           <option value="2"> Mediocre</option>
-                          <option value="3"> Good</option>
-                          <option value="4"> Very good</option>
-                          <option value="5"> Excellent</option>
+                          <option value="3"> Bueno</option>
+                          <option value="4"> Muy bueno</option>
+                          <option value="5"> Excelente</option>
                         </Form.Control>
                       </Form.Group>
 
                       <Form.Group controlId="comment">
-                        <Form.Label>Review</Form.Label>
+                        <Form.Label>Reseña</Form.Label>
                         <Form.Control
                           as="textarea"
                           row="5"
@@ -217,12 +217,13 @@ function ProductScreen({ match, history }) {
                         type="submit"
                         variant="primary"
                       >
-                        Submit
+                        Enviar
                       </Button>
                     </Form>
                   ) : (
                     <Message variant="info">
-                      Please <Link to="/login">login</Link> to write a review
+                      Porfavor <Link to="/login">ingresa</Link> para escribir
+                      una reseña
                     </Message>
                   )}
                 </ListGroup.Item>

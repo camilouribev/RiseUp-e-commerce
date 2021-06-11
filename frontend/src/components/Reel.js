@@ -5,7 +5,7 @@ import SlideShow from "./SlideShow";
 
 function Reel() {
   return (
-    <div>
+    <div className="wrapper">
       <Jumbotron />
       <PlanCards />
       <SlideShow />

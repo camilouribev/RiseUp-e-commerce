@@ -99,9 +99,9 @@ function ProductEditScreen({ match, history }) {
 
   return (
     <div>
-      <Link to="/admin/productlist">Go Back</Link>
+      <Link to="/admin/productlist">Volver</Link>
       <FormContainer>
-        <h1>Edit Product</h1>
+        <h1>Editar Producto</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
 
@@ -112,7 +112,7 @@ function ProductEditScreen({ match, history }) {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Nombre</Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter name"
@@ -122,7 +122,7 @@ function ProductEditScreen({ match, history }) {
             </Form.Group>
 
             <Form.Group controlId="price">
-              <Form.Label>Price</Form.Label>
+              <Form.Label>Precio</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter price"
@@ -132,7 +132,7 @@ function ProductEditScreen({ match, history }) {
             </Form.Group>
 
             <Form.Group controlId="image">
-              <Form.Label>Image</Form.Label>
+              <Form.Label>Imagen</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter image"
@@ -149,7 +149,7 @@ function ProductEditScreen({ match, history }) {
             </Form.Group>
 
             <Form.Group controlId="brand">
-              <Form.Label>Brand</Form.Label>
+              <Form.Label>Marca</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter brand"
@@ -169,7 +169,7 @@ function ProductEditScreen({ match, history }) {
             </Form.Group>
 
             <Form.Group controlId="category">
-              <Form.Label>Category</Form.Label>
+              <Form.Label>Categoría</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter category"
@@ -179,7 +179,7 @@ function ProductEditScreen({ match, history }) {
             </Form.Group>
 
             <Form.Group controlId="description">
-              <Form.Label>Description</Form.Label>
+              <Form.Label>Descripción</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter description"
@@ -189,7 +189,7 @@ function ProductEditScreen({ match, history }) {
             </Form.Group>
 
             <Button type="submit" variant="primary">
-              Update
+              Actualizar
             </Button>
           </Form>
         )}

@@ -32,40 +32,40 @@ function LoginScreen({ location, history }) {
 
   return (
     <FormContainer className="page-position">
-      <h1>Sign In</h1>
+      <h1>Ingresar</h1>
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email">
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label>Correo electrónico</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Enter Email"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Enter password"
+            placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Button type="submit" variant="primary">
-          Sign In
+          Entrar
         </Button>
       </Form>
 
       <Row className="py-3">
         <Col>
-          New Customer?{" "}
+          ¿No tienes cuenta?{" "}
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
-            Register
+            Regístrate
           </Link>
         </Col>
       </Row>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
@@ -28,7 +28,7 @@ function PaymentScreen({ history }) {
 
       <Form onSubmit={submitHandler}>
         <Form.Group>
-          <Form.Label as="legend">Select Method</Form.Label>
+          <Form.Label as="legend">Selecciona método</Form.Label>
           <Col>
             <Form.Check
               type="radio"
@@ -42,7 +42,7 @@ function PaymentScreen({ history }) {
         </Form.Group>
 
         <Button type="submit" variant="primary">
-          Continue
+          Continua
         </Button>
       </Form>
     </FormContainer>

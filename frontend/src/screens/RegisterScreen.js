@@ -40,67 +40,67 @@ function RegisterScreen({ location, history }) {
 
   return (
     <FormContainer>
-      <h1>Sign In</h1>
+      <h1>Ingresa</h1>
       {message && <Message variant="danger">{message}</Message>}
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="name">
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Nombre</Form.Label>
           <Form.Control
             required
             type="name"
-            placeholder="Enter name"
+            placeholder="Ingresa tu nombre"
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId="email">
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label>Correo electrónico</Form.Label>
           <Form.Control
             required
             type="email"
-            placeholder="Enter Email"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Contraseña</Form.Label>
           <Form.Control
             required
             type="password"
-            placeholder="Enter password"
+            placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId="passwordConfirm">
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label>Confirma contraseña</Form.Label>
           <Form.Control
             required
             type="password"
-            placeholder="Confirm password"
+            placeholder="Confirma la contraseña"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Button type="submit" variant="primary">
-          Register
+          Registrarse
         </Button>
       </Form>
 
       <Row className="py-3">
         <Col>
-          Have an account?{" "}
+          ¿Tienes una cuenta?{" "}
           <Link
             to={redirect ? `/login?redirect=${redirect}` : "/registerlogin"}
           >
-            Sign In
+            Ingresa
           </Link>
         </Col>
       </Row>

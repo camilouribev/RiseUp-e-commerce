@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,7 +24,7 @@ function OrderListScreen({ history }) {
 
   return (
     <div>
-      <h1>Orders</h1>
+      <h1>Órdenes</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -34,11 +34,11 @@ function OrderListScreen({ history }) {
           <thead>
             <tr>
               <th>ID</th>
-              <th>USER</th>
-              <th>DATE</th>
+              <th>USUARIO</th>
+              <th>FECHA</th>
               <th>TOTAL</th>
-              <th>PAID</th>
-              <th>DELIVERED</th>
+              <th>PAGADA</th>
+              <th>ENVIADA</th>
 
               <th></th>
             </tr>
@@ -70,7 +70,7 @@ function OrderListScreen({ history }) {
                 <td>
                   <LinkContainer to={`/order/${order._id}`}>
                     <Button variant="light" className="btn-sm">
-                      Details
+                      Detalles
                     </Button>
                   </LinkContainer>
                 </td>

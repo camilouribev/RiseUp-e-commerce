@@ -13,7 +13,7 @@ const SlideShow = () => {
           <li>8 poles profesionales, con espacio apropiado </li>
           <li> Salas de cambio de ropa y camerinos de maquillaje.</li>
           <li>Luces LED y sonido profesional</li>
-          <li>Clases grupales de máximo 5 personas</li>
+          <li>Clases grupales de máximo 7 personas</li>
           <li>Clases de acondicionamiento físico</li>
           <li>Clases de lira, telas y gimnasia artística </li>
           <li>Clases personalizadas</li>

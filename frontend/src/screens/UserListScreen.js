@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -34,7 +34,7 @@ function UserListScreen({ history }) {
 
   return (
     <div>
-      <h1>Users</h1>
+      <h1>Usuarios</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -44,7 +44,7 @@ function UserListScreen({ history }) {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Name</th>
+              <th>Nombre</th>
               <th>EMAIL</th>
               <th>ADMIN</th>
               <th></th>

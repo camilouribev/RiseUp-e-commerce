@@ -48,9 +48,9 @@ function UserEditScreen({ match, history }) {
   };
   return (
     <div>
-      <Link to="/admin/userlist">Go Back</Link>
+      <Link to="/admin/userlist">Volver</Link>
       <FormContainer>
-        <h1>Edit User</h1>
+        <h1>Editar Usuario</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
         {loading ? (
@@ -60,7 +60,7 @@ function UserEditScreen({ match, history }) {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Nombre</Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter name"
@@ -70,7 +70,7 @@ function UserEditScreen({ match, history }) {
             </Form.Group>
 
             <Form.Group controlId="email">
-              <Form.Label>Email Address</Form.Label>
+              <Form.Label>Correo electrónico</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter Email"
@@ -89,7 +89,7 @@ function UserEditScreen({ match, history }) {
             </Form.Group>
 
             <Button type="submit" variant="primary">
-              Update
+              Actualizar
             </Button>
           </Form>
         )}

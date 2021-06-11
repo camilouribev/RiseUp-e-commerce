@@ -1,8 +1,10 @@
 main {
   min-height: 80vh;
+  background-color: black;
 }
 body {
   padding-top: 4%;
+  background-color: black !important;
 }
 h1 {
   font-size: 1.8rem;
@@ -16,6 +18,10 @@ h2 {
 
 h3 {
   padding: 1rem 0;
+}
+
+.rounded .card {
+  background-color: none !important;
 }
 
 .rating span {
@@ -50,7 +56,7 @@ h3 {
 }
 
 .jumbotron {
-  margin: -2% 0% 0%;
+  margin: -3.5% 0% 0%;
   height: 100vh;
   width: 100hw;
   background-image: url("1.jpg");
@@ -60,7 +66,7 @@ h3 {
 }
 
 .jumbotron-2 {
-  margin: -2% 0% 0%;
+  margin: -3% 0% 0%;
   height: 100vh;
   background-image: url("2.jpg");
   background-size: cover;
@@ -211,6 +217,7 @@ h3 {
 }
 
 .card-container .card .face.face2 {
+  color: black;
   position: relative;
   background: #fff;
   display: flex;
@@ -236,7 +243,6 @@ h3 {
 .card-container .card .face.face2 .content h3 {
   margin: 0 0 10px 0;
   padding: 0;
-  color: #fff;
   font-size: 24px;
   text-align: center;
   color: #414141;
@@ -303,7 +309,12 @@ ul li {
 }
 
 .footer {
-  background-color: rgb(152, 84, 177);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(95, 62, 108, 1) 55%,
+    rgba(228, 47, 212, 1) 100%
+  );
   width: 100%;
 }
 
@@ -381,4 +392,179 @@ a:link {
   .carousel-caption h2 {
     font-size: 2.5vw;
   }
+}
+
+#nav-color {
+  background: rgb(2, 0, 36) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 17%,
+    rgba(95, 62, 108, 0) 100%
+  ) !important;
+}
+
+.btn.btn-outline-info {
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+}
+
+.btn.btn-outline-info:hover {
+  color: #fff;
+  background-color: rgb(201, 32, 201);
+  border-color: rgb(201, 32, 201);
+}
+
+.store-container {
+  margin-top: 0%;
+}
+
+@media (min-width: 992px) .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+  max-width: 1100px;
+}
+
+.card-header,
+.card-title {
+  color: black;
+}
+
+.card-header,
+.card-title:hover {
+  color: pink;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: white;
+}
+a.active.nav-link {
+  color: white;
+}
+div > h1 {
+  color: white;
+}
+img.card-img {
+}
+div > h2 {
+  color: white;
+}
+
+h3.card-text {
+  color: white;
+}
+
+div.rounded.card {
+  background-color: black;
+}
+
+div.card {
+  color: white;
+}
+
+div.list-group-item {
+  background-color: black;
+  border-color: gray;
+  border-width: 1px;
+  color: white;
+}
+
+label.form-label {
+  color: white;
+}
+
+div.col {
+  color: aliceblue;
+}
+
+div.row {
+  color: white;
+}
+div.row a {
+  color: white;
+  font-weight: 500;
+}
+
+button.btn-block.btn.btn-primary {
+  background-color: purple;
+}
+
+button.btn-block.btn.btn-primary:hover {
+  background-color: rgba(255, 7, 255, 0.74);
+}
+
+.btn.btn-primary:hover {
+  background-color: rgba(255, 7, 255, 0.74);
+}
+.btn.btn-primary {
+  background-color: purple;
+}
+
+.btn.btn-light {
+  background-color: purple;
+  color: white;
+}
+
+.btn.btn-light:hover {
+  background-color: rgba(255, 7, 255, 0.74);
+  color: white;
+}
+
+a.dropdown-item {
+  background: none;
+  background-color: black;
+  color: #efefef;
+}
+
+div.dropdown-menu.show {
+  background-color: black;
+}
+
+table.table-sm {
+  color: white;
+}
+
+.alert.alert-info.show {
+  color: black;
+  background-color: rgb(255, 180, 255);
+  border-color: purple;
+}
+
+.card-container .card .face.face2 .content h3 {
+  color: black;
+}
+
+ul.pagination > li {
+  position: relative;
+
+  margin: 0% 0%;
+  padding: 3px;
+}
+a.page-link {
+  background: rgb(97, 67, 97);
+  color: white;
+  font-size: 1.5em;
+}
+
+li.page-item.active {
+  background-color: purple;
+  font-size: 1.5em;
+}
+
+.page-item.active .page-link {
+  background-color: rgb(250, 3, 250);
 }

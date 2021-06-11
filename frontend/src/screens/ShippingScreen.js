@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
@@ -26,10 +26,10 @@ function ShippingScreen({ history }) {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 />
-      <h1>Shipping</h1>
+      <h1>Envío</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="address">
-          <Form.Label>Address</Form.Label>
+          <Form.Label>Dirección</Form.Label>
           <Form.Control
             required
             type="text"
@@ -40,7 +40,7 @@ function ShippingScreen({ history }) {
         </Form.Group>
 
         <Form.Group controlId="city">
-          <Form.Label>City</Form.Label>
+          <Form.Label>Ciudad</Form.Label>
           <Form.Control
             required
             type="text"
@@ -51,7 +51,7 @@ function ShippingScreen({ history }) {
         </Form.Group>
 
         <Form.Group controlId="postalCode">
-          <Form.Label>Postal code</Form.Label>
+          <Form.Label>Código Postal</Form.Label>
           <Form.Control
             required
             type="text"
@@ -62,7 +62,7 @@ function ShippingScreen({ history }) {
         </Form.Group>
 
         <Form.Group controlId="country">
-          <Form.Label>Country</Form.Label>
+          <Form.Label>Pais</Form.Label>
           <Form.Control
             required
             type="text"
@@ -72,7 +72,7 @@ function ShippingScreen({ history }) {
           ></Form.Control>
         </Form.Group>
         <Button type="submit" variant="primary">
-          Continue
+          Continua
         </Button>
       </Form>
     </FormContainer>

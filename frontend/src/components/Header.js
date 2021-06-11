@@ -23,6 +23,7 @@ function Header() {
         bg="dark"
         expand="lg"
         collapseOnSelect
+        id="nav-color"
       >
         <Container>
           <LinkContainer to="/">
@@ -40,32 +41,32 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             {<SearchBox />}
-            <Nav className="flex">
-              <LinkContainer to="/cart">
-                <Nav.Link>
-                  <i className="fas fa-shopping-cart"></i>Carrito
-                </Nav.Link>
-              </LinkContainer>
+            <Nav className="ml-auto">
               <LinkContainer to="/tienda">
                 <Nav.Link>
                   <i className="fas fa-store"></i>Tienda
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/cart">
+                <Nav.Link>
+                  <i className="fas fa-shopping-cart"></i>Carrito
                 </Nav.Link>
               </LinkContainer>
 
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id="username">
                   <LinkContainer to="/profile">
-                    <NavDropdown.Item>Profile</NavDropdown.Item>
+                    <NavDropdown.Item>Perfil</NavDropdown.Item>
                   </LinkContainer>
 
                   <NavDropdown.Item onClick={logoutHandler}>
-                    Logout
+                    Salir
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user"></i>Login
+                    <i className="fas fa-user"></i>Ingresar
                   </Nav.Link>
                 </LinkContainer>
               )}
