@@ -19,12 +19,12 @@ function Footer() {
                 Contacto:31011110101
               </a>
             </h4>
-            <h4 className="footer-text">
+            <h5 className="footer-text">
               <a href="info@riseup.co" style={{ color: "white" }}>
                 info@riseup.co
               </a>
-            </h4>
-            <h5 className="footer-text">&copy; Medellín, Antioquia</h5>
+            </h5>
+            <h5 className="footer-text"> Medellín, Antioquia</h5>
             <h5 className="footer-text">&copy; Rise Up Col</h5>
             <span>
               <i
