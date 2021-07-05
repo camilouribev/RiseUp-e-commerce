@@ -29,7 +29,7 @@ function Header() {
           <LinkContainer to="/">
             <Navbar.Brand>
               <img
-                src="/logo_rise_up.png"
+                src="../static/logo_rise_up.png"
                 width="70"
                 height="50"
                 alt="Rise Up"

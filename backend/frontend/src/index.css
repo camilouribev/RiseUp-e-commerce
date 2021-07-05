@@ -20,6 +20,10 @@ h3 {
   padding: 1rem 0;
 }
 
+h4 {
+  color: white !important;
+}
+
 .rounded .card {
   background-color: none !important;
 }

@@ -8,7 +8,7 @@ function Footer() {
         <Row>
           <Col className="text-center py-3 footer-text">
             <img
-              src="/logo_rise_up.png"
+              src="../static/logo_rise_up.png"
               width="60"
               height="40"
               alt="Rise Up"

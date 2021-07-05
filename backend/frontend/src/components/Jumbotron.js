@@ -19,7 +19,7 @@ function Jumbotron() {
         <div>
           <h4 className="jumbotron-text">otro nivel</h4>
           <p className="jumbotron-text-small">
-            los mejores insumos para baile ,
+            los mejores insumos para disciplinas aereas ,
             <br /> en un solo lugar.
           </p>
           <a className="jumbo-btn" href="/tienda">

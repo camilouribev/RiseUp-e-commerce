@@ -2,7 +2,11 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-const slideImages = ["academy-1.jpg", "academy-2.jpg", "academy-5.jpg"];
+const slideImages = [
+  "../static/academy-1.jpg",
+  "../static/academy-2.jpg",
+  "../static/academy-5.jpg",
+];
 
 const SlideShow = () => {
   return (
