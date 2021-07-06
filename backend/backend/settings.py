@@ -28,7 +28,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1', "https://riseuppoledance.herokuapp.com/" ]
 
 
 # Application definition
@@ -86,7 +86,7 @@ SIMPLE_JWT = {
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -135,7 +135,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'RiseUp',
         'USER': 'bbtvn',
-        'PASSWORD': 'sarita22', 
+        'PASSWORD': os.environ["DB_PASS"], 
         'HOST': 'riseup.c7a9cjvppz35.us-east-2.rds.amazonaws.com',
         'PORT': '5432'
     }
@@ -184,19 +184,15 @@ MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    BASE_DIR / 'frontend/build/public',
    
     BASE_DIR / 'frontend/build/static'
 ]
 
-MEDIA_ROOT = 'static/images'
+MEDIA_ROOT = BASE_DIR / 'static/images'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 CORS_ALLOW_ALL_ORIGINS = True
-AWS_QUERYSTRING_AUTH = False
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = "AKIARMNC3W4EY4BIIDW3"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_STORAGE_BUCKET_NAME = 'riseup-bucket'
 
 
 
@@ -204,3 +200,12 @@ AWS_STORAGE_BUCKET_NAME = 'riseup-bucket'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AWS_QUERYSTRING_AUTH = False
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
+AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
+AWS_STORAGE_BUCKET_NAME = 'riseup-bucket'
+
+if os.getcwd() == '/app':
+    DEBUG = False
