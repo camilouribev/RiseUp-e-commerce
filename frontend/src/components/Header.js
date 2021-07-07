@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { HashLink as Link } from "react-router-hash-link";
+// import { HashLink as Link } from "react-router-hash-link";
 
 import { logout } from "../actions/userActions";
 import SearchBox from "./SearchBox";
@@ -28,7 +28,7 @@ function Header() {
         id="nav-color"
       >
         <Container>
-          <Link to="/#main-top">
+          <LinkContainer to="/#main-top">
             <Navbar.Brand>
               <img
                 src="../static/logo_rise_up.png"
@@ -38,7 +38,7 @@ function Header() {
                 id="logo"
               ></img>
             </Navbar.Brand>
-          </Link>
+          </LinkContainer>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
