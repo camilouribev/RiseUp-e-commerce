@@ -12,7 +12,7 @@ function Jumbotron() {
             <br /> con instructoras de primer nivel
           </p>
           <Link to="#plans">
-            <a className="jumbo-btn">ver planes</a>
+            <div className="jumbo-btn">ver planes</div>
           </Link>
         </div>
       </div>
@@ -24,7 +24,7 @@ function Jumbotron() {
             <br /> en un solo lugar.
           </p>
           <Link to="/tienda">
-            <a className="jumbo-btn">ir a la tienda</a>
+            <div className="jumbo-btn">ir a la tienda</div>
           </Link>
         </div>
       </div>
