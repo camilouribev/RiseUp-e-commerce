@@ -1,6 +1,4 @@
 import React from "react";
-// import { HashLink as Link } from "react-router-hash-link";
-import { LinkContainer } from "react-router-bootstrap";
 
 function Jumbotron() {
   return (
@@ -12,9 +10,9 @@ function Jumbotron() {
             Aprende pole dance en clases personalizadas,
             <br /> con instructoras de primer nivel
           </p>
-          <LinkContainer to="#plans">
-            <a className="jumbo-btn">ver planes</a>
-          </LinkContainer>
+          <a className="jumbo-btn" href="#plans">
+            ver planes
+          </a>
         </div>
       </div>
       <div className="jumbotron-2">
@@ -24,9 +22,9 @@ function Jumbotron() {
             los mejores insumos para disciplinas aereas ,
             <br /> en un solo lugar.
           </p>
-          <LinkContainer to="/tienda">
-            <a className="jumbo-btn">ir a la tienda</a>
-          </LinkContainer>
+          <a className="jumbo-btn" href="/tienda">
+            ir a la tienda
+          </a>
         </div>
       </div>
     </div>
