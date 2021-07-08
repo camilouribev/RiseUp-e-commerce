@@ -41,7 +41,7 @@ function CartScreen({ match, location, history }) {
         <h1> Carrito de compras </h1>
         {cartItems.length === 0 ? (
           <Message variant="info">
-            Tu carrito está vacío <Link to="/"> Volver </Link>
+            Tu carrito está vacío <Link to="/tienda"> Volver </Link>
           </Message>
         ) : (
           <ListGroup variant="flush">
